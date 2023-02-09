@@ -12,28 +12,35 @@ def are_matching(left, right):
 def find_mismatch(text):
     opening_brackets_stack = []
     for i, next in enumerate(text):
+
         if next in "([{":
             # Process opening bracket, write your code here
-            opening_brackets_stack.append(Bracket(next,i))
+            opening_brackets_stack.append(Bracket(next, i))
 
         if next in ")]}":
             # Process closing bracket, write your code here
-            last = opening_brackets_stack.pop()
+            
             if opening_brackets_stack == []:
                 return i + 1
-            if are_matching(last.char, next) == "False":
+
+            last = opening_brackets_stack.pop()
+            if are_matching(last.char, next) == False:
                 return i + 1
 
-
-            
-    print(opening_brackets_stack)
+    if opening_brackets_stack == True:
+        last = opening_brackets_stack.pop()
+        return last.position + 1
+    return "Success"
 
 
 def main():
     text = input()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
-    print(mismatch)
+    if mismatch == "Success":
+        print("Success")
+    else:
+        print(mismatch)
 
 if __name__ == "__main__":
     main()
