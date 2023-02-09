@@ -40,7 +40,7 @@ def main():
     if mismatch == "Success":
         print("Success")
     else:
-        print(mismatch)
+        print(int(mismatch))
 
 if __name__ == "__main__":
     main()
