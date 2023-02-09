@@ -18,7 +18,14 @@ def find_mismatch(text):
 
         if next in ")]}":
             # Process closing bracket, write your code here
-            pass
+            last = opening_brackets_stack.pop()
+            if opening_brackets_stack == []:
+                return i + 1
+            if are_matching(last.char, next) == "False":
+                return i + 1
+
+
+            
     print(opening_brackets_stack)
 
 
