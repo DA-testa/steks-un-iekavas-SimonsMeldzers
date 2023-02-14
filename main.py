@@ -32,14 +32,14 @@ def find_mismatch(text):
     if opening_brackets_stack == True:
         last = opening_brackets_stack.pop()
         return last.position + 1
-    return "Success"
+    
 
 
 def main():
     text = input().strip()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
-    if mismatch == "Success":
+    if mismatch == 0:
         print("Success")
     else:
         print(mismatch)
