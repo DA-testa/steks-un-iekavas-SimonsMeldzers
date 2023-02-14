@@ -36,13 +36,13 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
+    text = input().strip()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
     if mismatch == "Success":
         print("Success")
     else:
-        print(4, end='')
+        print(mismatch, end='')
 
 if __name__ == "__main__":
     main()
