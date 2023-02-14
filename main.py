@@ -37,12 +37,23 @@ def find_mismatch(text):
 
 def main():
     text = input().strip()
+
+    if text == "F":
+        file = input().strip()
+        text = open(file).read().strip()
+    elif text == "I":
+        text = input().strip()
+    else:
+        return
+
     mismatch = find_mismatch(text)
     
     if mismatch == 0:
         print("Success")
     else:
         print(mismatch)
+
+
 
 if __name__ == "__main__":
     main()
