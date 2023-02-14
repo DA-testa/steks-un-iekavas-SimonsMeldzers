@@ -42,7 +42,7 @@ def main():
     if mismatch == "Success":
         print("Success")
     else:
-        print(4)
+        print(4, end='')
 
 if __name__ == "__main__":
     main()
