@@ -32,7 +32,7 @@ def find_mismatch(text):
     if opening_brackets_stack == True:
         last = opening_brackets_stack.pop()
         return last.position + 1
-    
+    return 0
 
 
 def main():
